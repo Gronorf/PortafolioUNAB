@@ -7,6 +7,6 @@
 
     </head>
     <body>
-    pagina HOME
+    ${mensaje}
     </body>
 </html>
