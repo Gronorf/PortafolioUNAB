@@ -4,12 +4,12 @@
     <facet type="jpa" name="JPA">
       <configuration>
         <setting name="validation-enabled" value="true" />
+        <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
-          <factory-entry name="mensajes-mysql" />
+          <factory-entry name="hospital" value="4f84d443-f950-4e10-9684-543442d69c3d" />
           <factory-entry name="noname-a.xml@0" value="e3e88629-3cc4-4edd-9886-ac184ac69845" />
         </datasource-mapping>
         <naming-strategy-map />
-        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>
     </facet>
   </component>
