@@ -11,11 +11,12 @@ public class Main {
             transaction.begin();
 
             Medico medicoTest = new Medico();
-            medicoTest.setRutMedico(123);
-            medicoTest.setNombreMedico("Fran");
+            medicoTest.setRutMedico(123884);
+            medicoTest.setNombreMedico("la fran");
             medicoTest.setApellidoPaternoMedico("Bettoli");
             medicoTest.setApellidoMaternoMedico("Pizzagalli");
             entityManager.persist(medicoTest);
+
 
             transaction.commit();
         } finally {
