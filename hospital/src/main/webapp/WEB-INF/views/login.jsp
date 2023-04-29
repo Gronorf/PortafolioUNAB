@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Home</title>
+        <title>LOGIN</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -47,12 +47,12 @@
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block">Log in</button>
             </div>
-            <div class="clearfix">
-                <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>
-                <a href="#" class="float-right">Forgot Password?</a>
-            </div>
         </form>
-        <p class="text-center"><a href="#">Create an Account</a></p>
+        <form action="/createaccount" method="get">
+            <input type="hidden" value="crear">
+            <p class="text-center"><a href="createaccount">Crear Cuenta</a></p>
+        </form>
+
     </div>
     </body>
 </html>
