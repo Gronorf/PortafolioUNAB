@@ -9,7 +9,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../resources/style.css">
 </head>
-<body id="bodyPadre">
+<body>
 <div class="container register-form" >
     <div class="form">
         <div class="note">
