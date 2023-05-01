@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         Medico medicoTest = new Medico();
-        medicoTest.setRutMedico(19023);
+        medicoTest.setRutMedico(123);
         medicoTest.setNombreMedico("la fran");
         medicoTest.setApellidoPaternoMedico("Bettoli");
         medicoTest.setApellidoMaternoMedico("Pizzagalli");

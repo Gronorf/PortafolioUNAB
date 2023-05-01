@@ -64,4 +64,15 @@ public class Medico {
     public void setIdMedico(int idMedico) {
         this.idMedico = idMedico;
     }
+
+    @Override
+    public String toString() {
+        return "Medico{" +
+                "idMedico=" + idMedico +
+                ", rutMedico=" + rutMedico +
+                ", nombreMedico='" + nombreMedico + '\'' +
+                ", apellidoPaternoMedico='" + apellidoPaternoMedico + '\'' +
+                ", apellidoMaternoMedico='" + apellidoMaternoMedico + '\'' +
+                '}';
+    }
 }

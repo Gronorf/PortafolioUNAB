@@ -2,7 +2,7 @@ package unab.portafolio.dao;
 
 public interface DAOManager {
 
-    MedicoDAO getMedicoDAO();
+   // MedicoDAO getMedicoDAO();
 
 //    CapacitacionDAO getCapacitacionDAO();
 //

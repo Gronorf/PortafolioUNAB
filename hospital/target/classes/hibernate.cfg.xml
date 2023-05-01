@@ -20,7 +20,7 @@
 
     <!-- MAPEO DE LAS ENTIDADES A LAS CLASES JAVA -->
     <mapping class="unab.portafolio.model.Usuario"/>
-    <mapping class="unab.portafolio.model.Medico"/>
+    <mapping class="unab.portafolio.model.medico.Medico"/>
 
 
     <!-- DB schema will be updated if needed -->
