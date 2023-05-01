@@ -1,30 +1,28 @@
-import jakarta.persistence.*;
-import unab.portafolio.model.Medico;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import unab.portafolio.model.medico.Medico;
 
 public class Main {
     public static void main(String[] args) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("default");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        EntityTransaction transaction = entityManager.getTransaction();
 
-        try {
-            transaction.begin();
-
-            Medico medicoTest = new Medico();
-            medicoTest.setRutMedico(123884);
-            medicoTest.setNombreMedico("la fran");
-            medicoTest.setApellidoPaternoMedico("Bettoli");
-            medicoTest.setApellidoMaternoMedico("Pizzagalli");
-            entityManager.persist(medicoTest);
+        Medico medicoTest = new Medico();
+        medicoTest.setRutMedico(19023);
+        medicoTest.setNombreMedico("la fran");
+        medicoTest.setApellidoPaternoMedico("Bettoli");
+        medicoTest.setApellidoMaternoMedico("Pizzagalli");
 
 
-            transaction.commit();
-        } finally {
-            if (transaction.isActive()) {
-                transaction.rollback();
-            }
-            entityManager.close();
-            entityManagerFactory.close();
+        Configuration configuration = new Configuration();
+        configuration.configure("hibernate.cfg.xml").addAnnotatedClass(Medico.class);
+        SessionFactory sessionFactory = configuration.buildSessionFactory();
+
+        try (Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
+
+            session.persist(medicoTest);
+
+            session.getTransaction().commit();
         }
     }
 }
