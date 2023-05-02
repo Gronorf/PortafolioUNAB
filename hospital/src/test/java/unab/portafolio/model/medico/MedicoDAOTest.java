@@ -3,9 +3,6 @@ package unab.portafolio.model.medico;
 import org.junit.Test;
 import unab.portafolio.dao.DAO;
 import unab.portafolio.dao.DAOException;
-import unab.portafolio.dao.DAOTest;
-
-import static org.junit.Assert.*;
 
 public class MedicoDAOTest extends DAO {
 
@@ -61,13 +58,4 @@ public class MedicoDAOTest extends DAO {
         medicoDAO.delete(medicoTest);
     }
 
-//    @Test
-//    public void testReadId() throws DAOException {
-//
-//        MedicoDAO medicoDAO = new MedicoDAO();
-//        Medico medicoTest = new Medico();
-//        medicoDAO.readId(1);
-//        System.out.println(medico.);
-//
-//    }
 }

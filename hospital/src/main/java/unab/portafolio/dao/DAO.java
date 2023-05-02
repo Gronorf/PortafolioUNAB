@@ -98,24 +98,6 @@ public abstract class DAO<T> {
         return isDeleted;
     }
 
-    public T readId(int id) throws DAOException {
 
-        T entidad = null;
-        Session session = HibernateUtility.getSessionFactory().openSession();
-
-        try {
-            String query = "FROM " + getNombreModelo();
-            Query<T> q = session.createQuery(query);
-            q.setParameter("id", id);
-            entidad = (T) q.list().get(0);
-
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        } finally {
-            session.close();
-        }
-
-        return entidad;
-    }
 }
 
