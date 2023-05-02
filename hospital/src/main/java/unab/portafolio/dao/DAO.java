@@ -1,7 +1,6 @@
 package unab.portafolio.dao;
 
 import org.hibernate.Session;
-import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import unab.portafolio.singleton.HibernateUtility;
 
@@ -42,6 +41,11 @@ public abstract class DAO<T> {
         List<T> entidades = null;
         Session session = HibernateUtility.getSessionFactory().openSession();
 
+        Session session = sessionFactory.getCurrentSession();
+        Employee employee = (Employee) session.get(Employee.class, new Integer(id));
+        return employee;
+
+
         try {
             String query = "FROM " + getNombreModelo();
             Query q = session.createQuery(query);
@@ -53,6 +57,28 @@ public abstract class DAO<T> {
         }
 
         return entidades;
+    }
+
+    public T readById(int id) throws DAOException {
+        T entidad = null;
+        Session session = HibernateUtility.getSessionFactory().openSession();
+
+        try {
+
+            String query = "FROM " + getNombreModelo() + " WHERE " + "VALUES =";
+            Query q = session.createQuery(query);
+            entidad = q.list();
+
+
+
+            entidad = (T) session.get(getNombreModelo(), id);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } finally {
+            session.close();
+        }
+
+        return entidad;
     }
 
     public boolean  update(T entidad) throws DAOException {

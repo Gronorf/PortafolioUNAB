@@ -7,6 +7,6 @@
 
     </head>
     <body>
-    ${mensaje}
+        LOGIN APROBADO . SE PRESENTA LA PAGINA DE HOME!.
     </body>
 </html>

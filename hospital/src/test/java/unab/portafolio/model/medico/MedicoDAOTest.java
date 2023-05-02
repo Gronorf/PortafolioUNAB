@@ -4,7 +4,7 @@ import org.junit.Test;
 import unab.portafolio.dao.DAO;
 import unab.portafolio.dao.DAOException;
 
-public class MedicoDAOTest extends DAO {
+public class MedicoDAOTest extends DAO<Medico> {
 
     @Test
     public void testCreate() throws DAOException {
@@ -38,9 +38,9 @@ public class MedicoDAOTest extends DAO {
         MedicoDAO medicoDAO = new MedicoDAO();
 
         Medico medicoTest = new Medico();
-        medicoTest.setIdMedico(7);
+        medicoTest.setIdMedico(1);
         medicoTest.setRutMedico(179950901);
-        medicoTest.setNombreMedico("Alberto");
+        medicoTest.setNombreMedico("Mauricio");
         medicoTest.setApellidoPaternoMedico("Gutierrez");
         medicoTest.setApellidoMaternoMedico("Ulloa");
 
@@ -53,7 +53,7 @@ public class MedicoDAOTest extends DAO {
         MedicoDAO medicoDAO = new MedicoDAO();
 
         Medico medicoTest = new Medico();
-        medicoTest.setIdMedico(10);
+        medicoTest.setIdMedico(2);
 
         medicoDAO.delete(medicoTest);
     }

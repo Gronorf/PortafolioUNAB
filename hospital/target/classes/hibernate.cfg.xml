@@ -19,8 +19,9 @@
     <property name="show_sql">true</property>
 
     <!-- MAPEO DE LAS ENTIDADES A LAS CLASES JAVA -->
-    <mapping class="unab.portafolio.model.Usuario"/>
+    <mapping class="unab.portafolio.model.usuario.Usuario"/>
     <mapping class="unab.portafolio.model.medico.Medico"/>
+    <mapping class="unab.portafolio.model.rol.Rol"/>
 
 
     <!-- DB schema will be updated if needed -->
