@@ -3,11 +3,11 @@ package unab.portafolio.dao;
 import org.junit.Test;
 import unab.portafolio.model.medico.Medico;
 
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class DAOTest extends DAO {
-
-
 
 
     @Test
@@ -40,11 +40,23 @@ public class DAOTest extends DAO {
 
     }
 
-    @Test
-    public void testReadAll() {
-    }
+//    @Test
+//    public readAll() throws  DAOException {
+//
+//        DAOTest test = new DAOTest();
+//
+//        List<Medico> daoTestList = test.readAll();
+//
+//
+//    }
 
-    @Test
-    public void testDelete() {
-    }
 }
+
+//
+//    @Test
+//    public void update() {
+//    }
+//
+//    @Test
+//    public void GetNombreModelo() {
+//    }

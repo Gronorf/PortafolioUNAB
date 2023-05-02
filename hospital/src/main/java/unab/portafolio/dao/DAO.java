@@ -33,6 +33,7 @@ public abstract class DAO<T> {
         } finally {
             session.close();
         }
+        System.out.println(getNombreModelo() + " fue ingresado: " + isCreated);
         return isCreated;
     }
 
@@ -54,6 +55,26 @@ public abstract class DAO<T> {
         return entidades;
     }
 
+    public boolean  update(T entidad) throws DAOException {
+
+        boolean isModified = false;
+        Session session = HibernateUtility.getSessionFactory().openSession();
+
+        try {
+
+            session.beginTransaction();
+            session.merge(entidad);
+            session.getTransaction().commit();
+            isModified = true;
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+
+        } finally {
+            session.close();
+        }
+        return isModified;
+    }
 
     public boolean  delete(T entidad) throws DAOException {
 
@@ -73,14 +94,28 @@ public abstract class DAO<T> {
         } finally {
             session.close();
         }
+        System.out.println(getNombreModelo() + " fue eliminado: " + isDeleted);
         return isDeleted;
     }
 
-    //void delete(T t) throws DAOException;
+    public T readId(int id) throws DAOException {
 
+        T entidad = null;
+        Session session = HibernateUtility.getSessionFactory().openSession();
 
+        try {
+            String query = "FROM " + getNombreModelo();
+            Query<T> q = session.createQuery(query);
+            q.setParameter("id", id);
+            entidad = (T) q.list().get(0);
 
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } finally {
+            session.close();
+        }
 
-   // T read(K id) throws DAOException;
+        return entidad;
+    }
 }
 
