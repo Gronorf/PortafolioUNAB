@@ -14,7 +14,7 @@ public class Medico {
     @Id
     @Column(name = "idMedico")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idMedico;
+    private Long idMedico;
 
     @Column(name = "rutMedico")
     private int rutMedico;
@@ -57,12 +57,14 @@ public class Medico {
         return result;
     }
 
-    public int getIdMedico() {
-        return idMedico;
-    }
 
-    public void setIdMedico(int idMedico) {
-        this.idMedico = idMedico;
+    public Medico(int rutMedico, String nombreMedico, String apellidoPaternoMedico, String apellidoMaternoMedico) {
+        this.rutMedico = rutMedico;
+        this.nombreMedico = nombreMedico;
+        this.apellidoPaternoMedico = apellidoPaternoMedico;
+        this.apellidoMaternoMedico = apellidoMaternoMedico;
+    }
+    public Medico() {
     }
 
     @Override
