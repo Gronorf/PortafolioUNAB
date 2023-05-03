@@ -1,17 +1,17 @@
 package unab.portafolio.model.medico;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import jakarta.annotation.Resource;
 
-@Service
+import java.util.List;
+
+
 public class MedicoService {
 
-    @Autowired
-    private MedicoRepository medicoRepository;
+    @Resource
+    private MedicoRepository repo;
 
-    public void MedicoRepository(MedicoRepository medicoRepository) {
-        this.medicoRepository = medicoRepository;
+    public List<Medico> listAll() {
+        return (List<Medico>) repo.findAll();
     }
-
 
 }

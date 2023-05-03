@@ -58,12 +58,14 @@ public class Medico {
     }
 
 
-    public Medico(int rutMedico, String nombreMedico, String apellidoPaternoMedico, String apellidoMaternoMedico) {
+    public Medico(Long idMedico, int rutMedico, String nombreMedico, String apellidoPaternoMedico, String apellidoMaternoMedico) {
+        this.idMedico = idMedico;
         this.rutMedico = rutMedico;
         this.nombreMedico = nombreMedico;
         this.apellidoPaternoMedico = apellidoPaternoMedico;
         this.apellidoMaternoMedico = apellidoMaternoMedico;
     }
+
     public Medico() {
     }
 
