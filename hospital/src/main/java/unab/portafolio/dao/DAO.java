@@ -41,10 +41,6 @@ public abstract class DAO<T> {
         List<T> entidades = null;
         Session session = HibernateUtility.getSessionFactory().openSession();
 
-        Session session = sessionFactory.getCurrentSession();
-        Employee employee = (Employee) session.get(Employee.class, new Integer(id));
-        return employee;
-
 
         try {
             String query = "FROM " + getNombreModelo();
@@ -67,7 +63,6 @@ public abstract class DAO<T> {
 
             String query = "FROM " + getNombreModelo() + " WHERE " + "VALUES =";
             Query q = session.createQuery(query);
-            entidad = q.list();
 
 
 
