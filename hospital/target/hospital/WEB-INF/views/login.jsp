@@ -36,16 +36,16 @@
     </head>
     <body>
     <div class="login-form">
-        <form action="/examples/actions/confirmation.php" method="post">
-            <h2 class="text-center">Log in</h2>
+        <form action="/examples/actions/con" method="post">
+            <h2 class="text-center">MediHub</h2>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Username" required="required">
+                <input type="text" class="form-control" placeholder="Usuario" required="required" name="nombreUsuario" oninvalid="this.setCustomValidity('Debe ingresar un Usuario.')" oninput="setCustomValidity('')">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password" required="required">
+                <input type="password" class="form-control" placeholder="Clave" required="required" name="claveUsuario" oninvalid="this.setCustomValidity('Debe ingresar un Clave.')" oninput="setCustomValidity('')">
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block">Log in</button>
+                <button type="submit" class="btn btn-primary btn-block">INGRESAR</button>
             </div>
         </form>
         <form action="/createaccount" method="get">
