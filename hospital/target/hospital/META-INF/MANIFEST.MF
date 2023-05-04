@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: mauri
+<<<<<<< HEAD
+Build-Jdk: Oracle OpenJDK version 20.0.1
+=======
+Build-Jdk: Oracle OpenJDK version 20
+>>>>>>> parent of f45b90f (Repository Pattern)
+
