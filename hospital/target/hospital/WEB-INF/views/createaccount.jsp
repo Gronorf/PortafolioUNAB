@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>CREATE ACCOUNT</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<<<<<<< HEAD
+=======
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+>>>>>>> parent of f45b90f (Repository Pattern)
     <link rel="stylesheet" href="../resources/style.css">
 </head>
 <body>
@@ -16,7 +21,11 @@
 
         <div class="form-content">
             <div class="row">
+<<<<<<< HEAD
                 <div class="col-md-12">
+=======
+                <div class="col-md-6">
+>>>>>>> parent of f45b90f (Repository Pattern)
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Nombre" value=""/>
                     </div>
@@ -24,7 +33,11 @@
                         <input type="text" class="form-control" placeholder="Apellido" value=""/>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div class="col-md-12">
+=======
+                <div class="col-md-6">
+>>>>>>> parent of f45b90f (Repository Pattern)
 
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Email" value=""/>

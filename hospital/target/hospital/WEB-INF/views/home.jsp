@@ -7,6 +7,10 @@
 
     </head>
     <body>
+<<<<<<< HEAD
         LOGIN APROBADO . SE PRESENTA LA PAGINA DE HOME!.
+=======
+    ${mensaje}
+>>>>>>> parent of f45b90f (Repository Pattern)
     </body>
 </html>

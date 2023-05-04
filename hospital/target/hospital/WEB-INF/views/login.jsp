@@ -36,6 +36,7 @@
     </head>
     <body>
     <div class="login-form">
+<<<<<<< HEAD
         <form action="/examples/actions/con" method="post">
             <h2 class="text-center">MediHub</h2>
             <div class="form-group">
@@ -46,6 +47,18 @@
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block">INGRESAR</button>
+=======
+        <form action="/examples/actions/confirmation.php" method="post">
+            <h2 class="text-center">Log in</h2>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username" required="required">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" required="required">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Log in</button>
+>>>>>>> parent of f45b90f (Repository Pattern)
             </div>
         </form>
         <form action="/createaccount" method="get">

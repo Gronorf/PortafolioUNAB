@@ -14,7 +14,7 @@ public class Medico {
     @Id
     @Column(name = "idMedico")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idMedico;
+    private int idMedico;
 
     @Column(name = "rutMedico")
     private int rutMedico;
@@ -57,6 +57,7 @@ public class Medico {
         return result;
     }
 
+<<<<<<< HEAD
 
     public Medico(Long idMedico, int rutMedico, String nombreMedico, String apellidoPaternoMedico, String apellidoMaternoMedico) {
         this.idMedico = idMedico;
@@ -67,6 +68,14 @@ public class Medico {
     }
 
     public Medico() {
+=======
+    public int getIdMedico() {
+        return idMedico;
+    }
+
+    public void setIdMedico(int idMedico) {
+        this.idMedico = idMedico;
+>>>>>>> parent of f45b90f (Repository Pattern)
     }
 
     @Override

@@ -23,7 +23,6 @@
     <mapping class="unab.portafolio.model.usuario.Usuario"/>
     <mapping class="unab.portafolio.model.medico.Medico"/>
     <mapping class="unab.portafolio.model.rol.Rol"/>
-    <mapping class="unab.portafolio.model.Control"/>
 
 
     <!-- DB schema will be updated if needed -->

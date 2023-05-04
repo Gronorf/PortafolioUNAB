@@ -18,12 +18,18 @@
     <!-- MUESTRA EN CONSOLA LAS QUERY SQL -->
     <property name="show_sql">true</property>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of f45b90f (Repository Pattern)
     <!-- MAPEO DE LAS ENTIDADES A LAS CLASES JAVA -->
     <mapping class="unab.portafolio.model.usuario.Usuario"/>
     <mapping class="unab.portafolio.model.medico.Medico"/>
     <mapping class="unab.portafolio.model.rol.Rol"/>
+<<<<<<< HEAD
     <mapping class="unab.portafolio.model.Control"/>
+=======
+>>>>>>> parent of f45b90f (Repository Pattern)
 
 
     <!-- DB schema will be updated if needed -->
