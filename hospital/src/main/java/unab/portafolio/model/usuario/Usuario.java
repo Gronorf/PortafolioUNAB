@@ -76,4 +76,13 @@ public class Usuario {
         result = 31 * result + (claveUsuario != null ? claveUsuario.hashCode() : 0);
         return result;
     }
+
+    public Usuario(String nombreUsuario, String emailUsuario, String claveUsuario) {
+        this.nombreUsuario = nombreUsuario;
+        this.emailUsuario = emailUsuario;
+        this.claveUsuario = claveUsuario;
+    }
+
+    public Usuario() {
+    }
 }

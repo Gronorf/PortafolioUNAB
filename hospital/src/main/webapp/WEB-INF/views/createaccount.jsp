@@ -11,49 +11,44 @@
 </head>
 <body>
 <div class="container register-form" >
+
+    <form method="post" action="/hospital_war/registrousuario">
     <div class="form">
         <div class="note">
             <p>Registro de Usuario</p>
         </div>
-
         <div class="form-content">
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Nombre" value=""/>
+                        <input type="text" class="form-control" placeholder="Nombre" name="nombreUsuario"/>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Apellido" value=""/>
+                        <input type="text" class="form-control" placeholder="email" name="emailUsuario"/>
                     </div>
                 </div>
                 <div class="col-md-6">
 
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Email" value=""/>
-                    </div>
-
                     <div class="dropdown">
                         <label for="language">Seleccionar ROL de Usuario:</label>
                         <select name="language" id="language">
-                            <option value="javascript">Paciente</option>
-                            <option value="python">Medico</option>
-                            <option value="c++">Administrativo</option>
+                            <option value="Paciente">Paciente</option>
+                            <option value="Medico">Medico</option>
+                            <option value="Admin">Administrativo</option>
                         </select>
                     </div>
-
                 </div>
             </div>
             <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Your Password *" value=""/>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Confirm Password *" value=""/>
+                    <input type="text" class="form-control" placeholder="Clave" name="claveUsuario"/>
                 </div>
             </div>
         </div>
-        <button type="button" class="btnSubmit">Submit</button>
+        <button type="Submit" >Crear Cuenta</button>
+    </form>
+
     </div>
 </div>
 </div>
