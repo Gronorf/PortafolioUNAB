@@ -26,9 +26,11 @@ public class MedicoDAOTest extends DAO<Medico> {
 
         MedicoDAO medicoDAO = new MedicoDAO();
 
-        for (Medico medicoTest: medicoDAO.readAll()) {
-            System.out.println(medicoTest.getNombreMedico());
+        for (int i = 0; i < medicoDAO.readAll().size(); i++) {
+
         }
+
+
 
     }
 

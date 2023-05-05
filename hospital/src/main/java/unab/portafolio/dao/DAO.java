@@ -41,12 +41,11 @@ public abstract class DAO<T> {
         List<T> entidades = null;
         Session session = HibernateUtility.getSessionFactory().openSession();
 
-
-
         try {
-            String query = "FROM " + getNombreModelo();
-            Query q = session.createQuery(query);
+
+            Query q = session.createQuery("FROM " + getNombreModelo(), getClass());
             entidades = q.list();
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
         } finally {
@@ -56,27 +55,19 @@ public abstract class DAO<T> {
         return entidades;
     }
 
-    public T readById(int id) throws DAOException {
+    public T findById(Long id, Class<T> clazz) throws DAOException {
         T entidad = null;
         Session session = HibernateUtility.getSessionFactory().openSession();
-
         try {
-
-//            String query = "FROM " + getNombreModelo() + " WHERE " + "VALUES =";
-//            Query q = session.createQuery(query);
-//            entidad = q.list();
-
-
-
-            entidad = (T) session.get(getNombreModelo(), id);
+            entidad = session.get(clazz, id);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         } finally {
             session.close();
         }
-
         return entidad;
     }
+
 
     public boolean  update(T entidad) throws DAOException {
 

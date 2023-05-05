@@ -1,4 +1,4 @@
-package unab.portafolio.model;
+package unab.portafolio.model.usuario;
 
 import jakarta.persistence.*;
 import lombok.Getter;
