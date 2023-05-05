@@ -3,9 +3,6 @@ package unab.portafolio.model.medico;
 import org.junit.Test;
 import unab.portafolio.dao.DAO;
 import unab.portafolio.dao.DAOException;
-import unab.portafolio.dao.DAOTest;
-
-import static org.junit.Assert.*;
 
 public class MedicoDAOTest extends DAO {
 

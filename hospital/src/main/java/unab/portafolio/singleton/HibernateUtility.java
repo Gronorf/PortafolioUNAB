@@ -9,7 +9,6 @@ public class HibernateUtility {
 
     private HibernateUtility() {
     }
-
     public static synchronized SessionFactory getSessionFactory() {
 
         if (sessionFactory == null) {

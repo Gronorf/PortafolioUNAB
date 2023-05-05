@@ -1,12 +1,7 @@
 package unab.portafolio.model.medico;
 
-import org.hibernate.Session;
-import org.hibernate.query.Query;
 import unab.portafolio.dao.DAO;
-import unab.portafolio.dao.DAOException;
-import unab.portafolio.singleton.HibernateUtility;
-
-import java.util.List;
+import unab.portafolio.model.medico.Medico;
 
 public class MedicoDAO extends DAO<Medico> {
     @Override

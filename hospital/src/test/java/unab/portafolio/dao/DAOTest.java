@@ -3,10 +3,6 @@ package unab.portafolio.dao;
 import org.junit.Test;
 import unab.portafolio.model.medico.Medico;
 
-import java.util.List;
-
-import static org.junit.Assert.*;
-
 public class DAOTest extends DAO {
 
 
