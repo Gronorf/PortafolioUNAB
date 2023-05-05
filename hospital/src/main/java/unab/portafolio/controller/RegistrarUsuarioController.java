@@ -19,8 +19,8 @@ public class RegistrarUsuarioController {
     @PostMapping(value="/registrousuario")
     public ModelAndView registroUsuario(@ModelAttribute Usuario usuario, Model model) throws IOException, DAOException {
         ModelAndView mav = new ModelAndView("login");
-        UsuarioDAO usuarioDAO = new UsuarioDAO();
 
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
         usuarioDAO.create(usuario);
         System.out.println("Registro Completado.");
 

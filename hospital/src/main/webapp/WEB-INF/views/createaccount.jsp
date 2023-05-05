@@ -22,7 +22,7 @@
                         <div class="card-body">
                             <form method="post" action="/hospital_war/registrousuario">
                                 <div class="form-group">
-                                    <label for="nombreUsuario">Nombre:</label>
+                                    <label for="nombreUsuario">Usuario:</label>
                                     <input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario"
                                         placeholder="Ingrese su nombre">
                                 </div>
@@ -31,14 +31,14 @@
                                     <input type="email" class="form-control" id="emailUsuario" name="emailUsuario"
                                         placeholder="Ingrese su correo electrónico">
                                 </div>
-                                <div class="form-group">
-                                    <label for="rolUsuario">Rol de Usuario:</label>
-                                    <select class="form-control" id="rolUsuario" name="rolUsuario">
-                                        <option value="Paciente">Paciente</option>
-                                        <option value="Medico">Médico</option>
-                                        <option value="Admin">Administrativo</option>
-                                    </select>
-                                </div>
+<%--                                <div class="form-group">--%>
+<%--                                    <label for="rolUsuario">Rol de Usuario:</label>--%>
+<%--                                    <select class="form-control" id="rolUsuario" name="rolUsuario">--%>
+<%--                                        <option value="Paciente">Paciente</option>--%>
+<%--                                        <option value="Medico">Médico</option>--%>
+<%--                                        <option value="Admin">Administrativo</option>--%>
+<%--                                    </select>--%>
+<%--                                </div>--%>
                                 <div class="form-group">
                                     <label for="claveUsuario">Clave:</label>
                                     <input type="password" class="form-control" id="claveUsuario" name="claveUsuario"
