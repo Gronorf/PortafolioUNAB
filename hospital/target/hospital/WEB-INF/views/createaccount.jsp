@@ -22,9 +22,9 @@
                         <div class="card-body">
                             <form method="post" action="/hospital_war/registrousuario">
                                 <div class="form-group">
-                                    <label for="nombreUsuario">Nombre:</label>
+                                    <label for="nombreUsuario">Usuario:</label>
                                     <input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario"
-                                        placeholder="Ingrese su nombre">
+                                        placeholder="Nombre de usuario">
                                 </div>
                                 <div class="form-group">
                                     <label for="emailUsuario">Email:</label>
@@ -34,9 +34,9 @@
                                 <div class="form-group">
                                     <label for="rolUsuario">Rol de Usuario:</label>
                                     <select class="form-control" id="rolUsuario" name="rolUsuario">
-                                        <option value="Paciente">Paciente</option>
-                                        <option value="Medico">Médico</option>
-                                        <option value="Admin">Administrativo</option>
+                                        <option value="paciente">Paciente</option>
+                                        <option value="medico">Médico</option>
+                                        <option value="admin">Administrativo</option>
                                     </select>
                                 </div>
                                 <div class="form-group">

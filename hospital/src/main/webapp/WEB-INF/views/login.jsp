@@ -36,13 +36,13 @@
     </head>
     <body>
     <div class="login-form">
-        <form action="/examples/actions/confirmation.php" method="post">
+        <form action="/hospital_war/verificationLogin" method="post">
             <h2 class="text-center">MediHub</h2>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Usuario" required="required">
+                <input type="text" class="form-control" placeholder="Usuario" required="required" id="nombreUsuario" name="nombreUsuario">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="Clave" required="required">
+                <input type="password" class="form-control" placeholder="Clave" required="required" id="claveUsuario" name="claveUsuario">
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block">Entrar</button>

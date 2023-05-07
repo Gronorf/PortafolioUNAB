@@ -16,12 +16,12 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 public class MvcConfiguration implements WebMvcConfigurer {
 
     // Este metodo setea las URL con las vistas JSP creadas.
+
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("login");
-        registry.addViewController("/login").setViewName("login");
         registry.addViewController("/home").setViewName("home");
         registry.addViewController("/createaccount").setViewName("createaccount");
-    }
+   }
 
     @Bean
     public ViewResolver getViewResolver() {

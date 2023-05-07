@@ -1,7 +1,12 @@
 package unab.portafolio.model.usuario;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+
+@Getter
+@Setter
 @Entity
 public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,38 +22,9 @@ public class Usuario {
     @Basic
     @Column(name = "claveUsuario")
     private String claveUsuario;
-
-    public int getIdusuario() {
-        return idusuario;
-    }
-
-    public void setIdusuario(int idusuario) {
-        this.idusuario = idusuario;
-    }
-
-    public String getNombreUsuario() {
-        return nombreUsuario;
-    }
-
-    public void setNombreUsuario(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
-    }
-
-    public String getEmailUsuario() {
-        return emailUsuario;
-    }
-
-    public void setEmailUsuario(String emailUsuario) {
-        this.emailUsuario = emailUsuario;
-    }
-
-    public String getClaveUsuario() {
-        return claveUsuario;
-    }
-
-    public void setClaveUsuario(String claveUsuario) {
-        this.claveUsuario = claveUsuario;
-    }
+    @Basic
+    @Column(name = "rolUsuario")
+    private String rolUsuario;
 
     @Override
     public boolean equals(Object o) {
