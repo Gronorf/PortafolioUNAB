@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,30 +21,29 @@
         <%@include file="../resources/navbar.jsp" %>
     </nav>
 </nav>
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-sm-6 col-lg-3 mb-4">
-            <a href="#">
-                <img src="https://via.placeholder.com/300x300.png?text=Button+1" class="img-fluid rounded">
-            </a>
-        </div>
-        <div class="col-sm-6 col-lg-3 mb-4">
-            <a href="#">
-                <img src="https://via.placeholder.com/300x300.png?text=Button+2" class="img-fluid rounded">
-            </a>
-        </div>
-        <div class="col-sm-6 col-lg-3 mb-4">
-            <a href="#">
-                <img src="https://via.placeholder.com/300x300.png?text=Button+3" class="img-fluid rounded">
-            </a>
-        </div>
-        <div class="col-sm-6 col-lg-3 mb-4">
-            <a href="#">
-                <img src="https://via.placeholder.com/300x300.png?text=Button+4" class="img-fluid rounded">
-            </a>
-        </div>
-    </div>
-</div>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <c:forEach var="product" items="${products}">
+        <tr>
+            <td>${product.id}</td>
+            <td>${product.name}</td>
+            <td>${product.description}</td>
+            <td>${product.price}</td>
+        </tr>
+    </c:forEach>
+    </tbody>
+</table>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
