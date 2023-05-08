@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,13 +32,22 @@
             .btn {
                 font-size: 15px;
                 font-weight: bold;
+                background-color: #398378;
+                color: #fff;
+            }
+            .btn:hover {
+                background-color: #73a873;
+                color: #fff;
             }
         </style>
     </head>
     <body>
     <div class="login-form">
         <form action="/hospital_war/verificationLogin" method="post">
-            <h2 class="text-center">MediHub</h2>
+
+            <div class="form-group" style="margin-bottom: 20px;">
+                <img src="resources/logo.png" alt="MediHub" class="img-responsive" style="max-width: 100%; height: auto;"/>
+            </div>
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Usuario" required="required" id="nombreUsuario" name="nombreUsuario">
             </div>
@@ -52,7 +62,32 @@
             <input type="hidden" value="crear">
             <p class="text-center"><a href="createaccount">Crear Cuenta</a></p>
         </form>
-
     </div>
+
+    <% if (request.getAttribute("cuentaCreada") != null) { %>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Cuenta Creada</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Su cuenta ha sido creada exitosamente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ... -->
+    <% } %>
+    <script>
+        $(document).ready(function () {
+            $('#myModal').modal('show');
+        });
+    </script>
+
+
     </body>
 </html>

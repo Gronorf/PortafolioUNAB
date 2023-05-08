@@ -26,7 +26,7 @@ public class RegistrarUsuarioController {
         UsuarioDAO usuarioDAO = new UsuarioDAO();
         usuarioDAO.create(usuario);
         usuario.setRolUsuario(rolUsuario);
-        System.out.println("Registro Completado.");
+        model.addAttribute("cuentaCreada", true);
 
         ModelAndView mav = new ModelAndView("login");
         return mav;

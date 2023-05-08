@@ -23,7 +23,7 @@ public class LoginController {
     static String nombreLogin;
     static String rolLogin;
 
-    @GetMapping(value="/")
+    @GetMapping(value="/cargarLogin")
     public ModelAndView cargarLogin(Usuario usuario) throws IOException{
 
         return new ModelAndView("login");
@@ -31,8 +31,6 @@ public class LoginController {
 
     @PostMapping(value="/verificationLogin")
     public ModelAndView entrarLogin(HttpServletRequest request) throws IOException, DAOException {
-
-
 
         String nombreUsuario = request.getParameter("nombreUsuario");
         System.out.println(nombreUsuario);
@@ -43,8 +41,7 @@ public class LoginController {
 
         for (Usuario usuario: usuarioDAO.readAll()) {
             if (nombreUsuario.equals(usuario.getNombreUsuario()) && claveUsuario.equals(usuario.getClaveUsuario())) {
-//                nombreLogin = nombreUsuario;
-//                rolLogin = usuario.getRolUsuario();
+
                 request.setAttribute("nombreLogin", nombreUsuario);
                 request.setAttribute("rolLogin", usuario.getRolUsuario());
                 return new ModelAndView("home");
