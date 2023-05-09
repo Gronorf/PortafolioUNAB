@@ -45,28 +45,43 @@
             </form>
         </div>
         <div class="col-md-2">
-            <div class="card text-center">
-                <div class="image">
-                    <img src="resources/addlist.png" width="75"/>
-                </div>
-                <span>Agregar Paciente</span>
-            </div>
+            <form action="/inicioagregarpaciente" method="get">
+                <a href="agregarpaciente" style="text-decoration: none;">
+                    <div class="card text-center">
+                        <div class="image">
+                            <input type="hidden">
+                            <img src="resources/addlist.png" width="75"/>
+                        </div>
+                        <span>Agregar Paciente</span>
+                    </div>
+                </a>
+            </form>
         </div>
         <div class="col-md-2">
-            <div class="card text-center">
-                <div class="image">
-                    <img src="https://i.imgur.com/LaQvLQG.png" width="75"/>
-                </div>
-                <span>Car Repair</span>
-            </div>
+            <form action="/iniciobuscar" method="get">
+                <a href="buscarmodificarpaciente" style="text-decoration: none;">
+                    <div class="card text-center">
+                        <div class="image">
+                            <input type="hidden">
+                            <img src="resources/modifyicon.png" width="75"/>
+                        </div>
+                        <span>Modificar Paciente</span>
+                    </div>
+                </a>
+            </form>
         </div>
         <div class="col-md-2">
-            <div class="card text-center">
-                <div class="image">
-                    <img src="https://i.imgur.com/9UsQzOZ.png" width="75"/>
-                </div>
-                <span>Electrician</span>
-            </div>
+            <form action="/finalmodificar" method="get">
+                <a href="agregarpaciente" style="text-decoration: none;">
+                    <div class="card text-center">
+                        <div class="image">
+                            <input type="hidden">
+                            <img src="resources/deleteicon.png" width="75"/>
+                        </div>
+                        <span>Eliminar Paciente</span>
+                    </div>
+                </a>
+            </form>
         </div>
         <div class="col-md-2">
             <div class="card text-center">

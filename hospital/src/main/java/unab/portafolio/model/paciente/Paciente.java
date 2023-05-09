@@ -6,17 +6,16 @@ import lombok.Setter;
 
 @Getter
 @Setter
+@Table
 @Entity
 public class Paciente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "idPaciente")
     private int idPaciente;
-    @Basic
-    @Column(name = "rutPaciente")
+    @Column(name = "rutPaciente", nullable = false, unique = true)
     private int rutPaciente;
-    @Basic
-    @Column(name = "fichaClinica")
+    @Column(name = "fichaClinica", nullable = false, unique = true)
     private int fichaClinica;
     @Basic
     @Column(name = "nombrePaciente")

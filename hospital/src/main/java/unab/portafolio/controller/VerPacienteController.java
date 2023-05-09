@@ -20,9 +20,8 @@ public class VerPacienteController {
         PacienteDAO pacienteDAO = new PacienteDAO();
         List<Paciente> pacientes = pacienteDAO.readAll();
 
-        for (Paciente paciente: pacientes) {
-            System.out.println(paciente);
-        }
+        request.setAttribute("pacientes", pacientes);
+
 
         ModelAndView mav = new ModelAndView("verpaciente");
         return mav;

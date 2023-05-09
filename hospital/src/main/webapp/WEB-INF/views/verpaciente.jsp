@@ -25,24 +25,27 @@
 <table class="table">
     <thead>
     <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Price</th>
+        <th>N°</th>
+        <th>Rut</th>
+        <th>Ficha Clinica</th>
+        <th>Nombre</th>
+        <th>Apellido Paterno</th>
+        <th>Apellido Materno</th>
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="product" items="${products}">
+    <c:forEach var="paciente" items="${pacientes}">
         <tr>
-            <td>${product.id}</td>
-            <td>${product.name}</td>
-            <td>${product.description}</td>
-            <td>${product.price}</td>
+            <td>${paciente.idPaciente}</td>
+            <td>${paciente.rutPaciente}</td>
+            <td>${paciente.fichaClinica}</td>
+            <td>${paciente.nombrePaciente}</td>
+            <td>${paciente.apellidoPaternoPaciente}</td>
+            <td>${paciente.apellidoMaternoPaciente}</td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
