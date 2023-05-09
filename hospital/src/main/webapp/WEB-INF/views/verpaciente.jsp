@@ -22,30 +22,32 @@
     </nav>
 </nav>
 
-<table class="table">
-    <thead>
-    <tr>
-        <th>N°</th>
-        <th>Rut</th>
-        <th>Ficha Clinica</th>
-        <th>Nombre</th>
-        <th>Apellido Paterno</th>
-        <th>Apellido Materno</th>
-    </tr>
-    </thead>
-    <tbody>
-    <c:forEach var="paciente" items="${pacientes}">
+<div class="table-responsive">
+    <table class="table">
+        <thead>
         <tr>
-            <td>${paciente.idPaciente}</td>
-            <td>${paciente.rutPaciente}</td>
-            <td>${paciente.fichaClinica}</td>
-            <td>${paciente.nombrePaciente}</td>
-            <td>${paciente.apellidoPaternoPaciente}</td>
-            <td>${paciente.apellidoMaternoPaciente}</td>
+            <th>N°</th>
+            <th>Rut</th>
+            <th>Ficha Clinica</th>
+            <th>Nombre</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
         </tr>
-    </c:forEach>
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+        <c:forEach var="paciente" items="${pacientes}">
+            <tr>
+                <td>${paciente.idPaciente}</td>
+                <td>${paciente.rutPaciente}</td>
+                <td>${paciente.fichaClinica}</td>
+                <td>${paciente.nombrePaciente}</td>
+                <td>${paciente.apellidoPaternoPaciente}</td>
+                <td>${paciente.apellidoMaternoPaciente}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"

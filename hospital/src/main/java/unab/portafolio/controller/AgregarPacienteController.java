@@ -11,10 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 import unab.portafolio.dao.DAOException;
 import unab.portafolio.model.paciente.Paciente;
 import unab.portafolio.model.paciente.PacienteDAO;
-import unab.portafolio.model.usuario.Usuario;
 
 import java.io.IOException;
-import java.util.List;
 
 @Controller
 public class AgregarPacienteController {

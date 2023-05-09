@@ -49,3 +49,8 @@ body{
     background-color: #73a873;
     color: #fff;
 }
+.btn-close {
+    font-size: 1.5rem;
+    color: red;
+}
+

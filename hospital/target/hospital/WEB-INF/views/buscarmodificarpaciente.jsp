@@ -37,7 +37,7 @@
                                    placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="rutPaciente">Ficha Clinica:</label>
+                            <label for="fichaClinica">Ficha Clinica:</label>
                             <input type="text" class="form-control" id="fichaClinica" name="fichaClinica"
                                    placeholder="">
                         </div>

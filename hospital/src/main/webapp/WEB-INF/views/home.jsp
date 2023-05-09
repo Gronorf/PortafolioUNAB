@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,16 +23,9 @@
     </nav>
 </nav>
 
-
-<%--<form action="/verpaciente" method="get">--%>
-<%--    <input type="hidden" value="crear">--%>
-<%--    <p class="text-center"><a href="createaccount">Crear Cuenta</a></p>--%>
-<%--</form>--%>
-
-
 <div class="container bg-white mt-5 p-3">
-    <div class="row g-2">
-        <div class="col-md-2">
+    <div class="row row-cols-md-2 row-cols-lg-6 g-2">
+        <div class="col">
             <form action="/verpaciente" method="get">
                 <a href="verpaciente" style="text-decoration: none;">
                     <div class="card text-center">
@@ -44,7 +38,7 @@
                 </a>
             </form>
         </div>
-        <div class="col-md-2">
+        <div class="col">
             <form action="/inicioagregarpaciente" method="get">
                 <a href="agregarpaciente" style="text-decoration: none;">
                     <div class="card text-center">
@@ -52,12 +46,12 @@
                             <input type="hidden">
                             <img src="resources/addlist.png" width="75"/>
                         </div>
-                        <span>Agregar Paciente</span>
+                        <span>Ingresar Paciente</span>
                     </div>
                 </a>
             </form>
         </div>
-        <div class="col-md-2">
+        <div class="col">
             <form action="/iniciobuscar" method="get">
                 <a href="buscarmodificarpaciente" style="text-decoration: none;">
                     <div class="card text-center">
@@ -70,9 +64,9 @@
                 </a>
             </form>
         </div>
-        <div class="col-md-2">
-            <form action="/finalmodificar" method="get">
-                <a href="agregarpaciente" style="text-decoration: none;">
+        <div class="col">
+            <form action="/inicioeliminarpaciente" method="get">
+                <a href="eliminarpaciente" style="text-decoration: none;">
                     <div class="card text-center">
                         <div class="image">
                             <input type="hidden">
@@ -83,75 +77,53 @@
                 </a>
             </form>
         </div>
-        <div class="col-md-2">
-            <div class="card text-center">
-                <div class="image">
-                    <img src="https://i.imgur.com/iUd0UJk.png" width="75"/>
-                </div>
-                <span>Painter</span>
-            </div>
+        <div class="col">
+            <form action="/finalmodificar" method="get">
+                <a href="agregarpaciente" style="text-decoration: none;">
+                    <div class="card text-center">
+                        <div class="image">
+                            <input type="hidden">
+                            <img src="resources/controllogo.png" width="75"/>
+                        </div>
+                        <span>Ingresar Control</span>
+                    </div>
+                </a>
+            </form>
         </div>
-        <div class="col-md-2">
-            <div class="card text-center">
-                <div class="image">
-                    <img src="https://i.imgur.com/jfJQfUA.png" width="75"/>
-                </div>
-                <span>Plumber</span>
-            </div>
+        <div class="col">
+            <form action="/finalmodificar" method="get">
+                <a href="agregarpaciente" style="text-decoration: none;">
+                    <div class="card text-center">
+                        <div class="image">
+                            <input type="hidden">
+                            <img src="resources/reportlogo.png" width="75"/>
+                        </div>
+                        <span>Generar Reporte</span>
+                    </div>
+                </a>
+            </form>
         </div>
-
-        <div class="col-md-2">
-            <div class="card text-center">
-                <div class="image">
-                    <img src="https://i.imgur.com/B3pzxO5.png" width="75"/>
-                </div>
-                <span>Carpenter</span>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="card text-center">
-                <div class="image">
-                    <img src="https://i.imgur.com/0pBmq1V.png" width="75"/>
-                </div>
-                <span>Makeup</span>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="card text-center">
-                <div class="image">
-                    <img src="https://i.imgur.com/9UsQzOZ.png" width="75"/>
-                </div>
-                <span>Grooming</span>
-            </div>
-        </div>
-
-        <div class="col-md-2">
-            <div class="card text-center">
-                <div class="image">
-                    <img src="https://i.imgur.com/Vcfr7J6.png" width="75"/>
-                </div>
-                <span>Pest control</span>
-            </div>
-        </div>
-
-        <div class="col-md-2">
-            <div class="card text-center">
-                <div class="image">
-                    <img src="https://i.imgur.com/jfJQfUA.png" width="75"/>
-                </div>
-                <span>Hair Style</span>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="card text-center">
-                <div class="image">
-                    <img src="https://i.imgur.com/iUd0UJk.png" width="75"/>
-                </div>
-                <span>Massage</span>
-            </div>
+        <div class="col">
+                <a href="/hospital_war/" style="text-decoration: none;">
+                    <div class="card text-center">
+                        <div class="image">
+                            <input type="hidden">
+                            <img src="resources/exitlogo.png" width="75"/>
+                        </div>
+                        <span>Salir</span>
+                    </div>
+                </a>
         </div>
     </div>
 </div>
+
+<c:if test="${not empty mensaje}">
+    <div class="alert alert-success text-center mensaje-fade" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        <p>${mensaje}</p>
+    </div>
+</c:if>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>

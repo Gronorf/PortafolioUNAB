@@ -25,7 +25,7 @@ public class BuscarPacienteController {
 	}
 
 	@PostMapping(value="/finalbuscar")
-	public ModelAndView test2(@ModelAttribute Model model, HttpServletResponse response, @org.jetbrains.annotations.NotNull HttpServletRequest request) throws IOException, DAOException {
+	public ModelAndView test2(HttpServletResponse response, HttpServletRequest request) throws IOException, DAOException {
 
 		PacienteDAO pacienteDAO = new PacienteDAO();
 		int rutPaciente = Integer.parseInt(request.getParameter("rutPaciente"));

@@ -30,21 +30,21 @@
                     <h3 class="text-center">Agregar Paciente</h3>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="/hospital_war/agregarpacienteok">
+                    <form method="post" action="/hospital_war/agregarpacienteok" onsubmit="return validarFormulario()">
                         <div class="form-group">
                             <label for="rutPaciente">Rut Paciente:</label>
                             <input type="text" class="form-control" id="rutPaciente" name="rutPaciente"
-                                   placeholder="">
+                                   placeholder="" required>
                         </div>
                         <div class="form-group">
                             <label for="fichaClinica">Ficha Clinica:</label>
                             <input type="text" class="form-control" id="fichaClinica" name="fichaClinica"
-                                   placeholder="">
+                                   placeholder="" required>
                         </div>
                         <div class="form-group">
                             <label for="nombrePaciente">Nombre:</label>
                             <input type="text" class="form-control" id="nombrePaciente" name="nombrePaciente"
-                                   placeholder="">
+                                   placeholder="" required>
                         </div>
                         <div class="form-group">
                             <label for="apellidoPaternoPaciente">Apellido Paterno:</label>
@@ -65,6 +65,24 @@
         </div>
     </div>
 </div>
+
+<script>
+    function validarFormulario() {
+        // Obtener los valores de los campos del formulario
+        var rutPaciente = document.getElementById("rutPaciente").value;
+        var fichaClinica = document.getElementById("fichaClinica").value;
+        var nombrePaciente = document.getElementById("nombrePaciente").value;
+
+        // Validar que los campos no estén vacíos
+        if (rutPaciente == "" || fichaClinica == "" || nombrePaciente == "") {
+            alert("Debe completar todos los campos.");
+            return false;
+        }
+
+        // Si todas las validaciones son exitosas, enviar el formulario
+        return true;
+    }
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
