@@ -34,17 +34,17 @@
                         <div class="form-group">
                             <label for="rutPaciente">Rut Paciente:</label>
                             <input type="text" class="form-control" id="rutPaciente" name="rutPaciente"
-                                   placeholder="" required>
+                                   placeholder="" required pattern="[0-9]+">
                         </div>
                         <div class="form-group">
                             <label for="fichaClinica">Ficha Clinica:</label>
                             <input type="text" class="form-control" id="fichaClinica" name="fichaClinica"
-                                   placeholder="" required>
+                                   placeholder="" required pattern="[0-9]+">
                         </div>
                         <div class="form-group">
                             <label for="nombrePaciente">Nombre:</label>
                             <input type="text" class="form-control" id="nombrePaciente" name="nombrePaciente"
-                                   placeholder="" required>
+                                   placeholder="" required pattern="^[a-zA-Z\s]+$">
                         </div>
                         <div class="form-group">
                             <label for="apellidoPaternoPaciente">Apellido Paterno:</label>
@@ -65,6 +65,13 @@
         </div>
     </div>
 </div>
+
+<c:if test="${not empty mensajeError}">
+    <div class="alert alert-danger text-center mensaje-fade" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        <p>${mensajeError}</p>
+    </div>
+</c:if>
 
 <script>
     function validarFormulario() {

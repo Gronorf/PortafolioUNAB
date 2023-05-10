@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.sql.Date;
+import java.sql.Timestamp;
+
 @Getter
 @Setter
 @Table
@@ -26,6 +29,15 @@ public class Paciente {
     @Basic
     @Column(name = "apellidoMaternoPaciente")
     private String apellidoMaternoPaciente;
+    @Basic
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "ingresoPaciente", columnDefinition = "DATETIME")
+    private Timestamp ingresoPaciente;
+    @PrePersist
+    public void setIngresoPaciente() {
+        this.ingresoPaciente = new Timestamp(System.currentTimeMillis());
+    }
+
 
 
     @Override
@@ -69,5 +81,13 @@ public class Paciente {
                 ", apellidoPaternoPaciente='" + apellidoPaternoPaciente + '\'' +
                 ", apellidoMaternoPaciente='" + apellidoMaternoPaciente + '\'' +
                 '}';
+    }
+
+    public Timestamp getIngresoPaciente() {
+        return ingresoPaciente;
+    }
+
+    public void setIngresoPaciente(Timestamp ingresoPaciente) {
+        this.ingresoPaciente = ingresoPaciente;
     }
 }

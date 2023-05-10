@@ -31,38 +31,15 @@
             <button type="submit" class="btn btn-primary btn-block">Entrar</button>
         </div>
     </form>
-    <form action="/createaccount" method="get">
-        <input type="hidden" value="crear">
-        <p class="text-center"><a href="createaccount">Crear Cuenta</a></p>
+
+    <form action="createaccount" method="get">
+            <input type="hidden" value="crear">
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Crear Cuenta</button>
+            </div>
     </form>
+
 </div>
-
-<% if (request.getAttribute("cuentaCreada") != null) { %>
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">Cuenta Creada</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar"><span
-                        aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body">
-                <p>Su cuenta ha sido creada exitosamente.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- ... -->
-<% request.setAttribute("cuentaCreada", null); %>
-<% } %>
-
-<script>
-    $(document).ready(function () {
-        $('#myModal').modal('show');
-    });
-</script>
-
 
 </body>
 
@@ -106,11 +83,10 @@
 </footer>
 
 
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2023 - Todos los derechos reservados
-    </div>
+<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 - Todos los derechos reservados
+</div>
 </footer>
-
 
 
 </html>

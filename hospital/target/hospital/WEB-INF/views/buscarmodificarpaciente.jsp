@@ -32,14 +32,9 @@
                 <div class="card-body">
                     <form method="post" action="/hospital_war/finalbuscar">
                         <div class="form-group">
-                            <label for="rutPaciente">Rut Paciente:</label>
-                            <input type="text" class="form-control" id="rutPaciente" name="rutPaciente"
-                                   placeholder="">
-                        </div>
-                        <div class="form-group">
-                            <label for="fichaClinica">Ficha Clinica:</label>
-                            <input type="text" class="form-control" id="fichaClinica" name="fichaClinica"
-                                   placeholder="">
+                            <label for="targetPaciente">Ingrese Rut o Ficha Clinica:</label>
+                            <input type="text" class="form-control" id="targetPaciente" name="targetPaciente"
+                                   placeholder="" required pattern="[0-9]+">
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Buscar Paciente</button>
                     </form>

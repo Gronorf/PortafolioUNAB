@@ -36,10 +36,11 @@
                         <div class="form-group">
                             <label for="targetPaciente">Ingrese Rut o Ficha Clinica:</label>
                             <input type="text" class="form-control" id="targetPaciente" name="targetPaciente"
-                                   placeholder="">
+                                   placeholder="" required pattern="[0-9]+">
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Buscar Paciente</button>
                     </form>
+
                 </div>
             </div>
         </div>

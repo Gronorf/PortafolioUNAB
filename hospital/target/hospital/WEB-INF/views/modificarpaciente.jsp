@@ -30,35 +30,36 @@
                     <h3 class="text-center">Modificar Paciente</h3>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="/hospital_war/agregarpacienteok">
+                    <c:set var="paciente" value="${pacienteMod}" />
+                    <form method="post" action="/hospital_war/finalmodificar">
                         <div class="form-group">
                             <label for="rutPaciente">Rut Paciente:</label>
                             <input type="text" class="form-control" id="rutPaciente" name="rutPaciente"
-                                   value=${paciente.rutPaciente}>
+                                   value=<c:out value="${paciente.rutPaciente}" />>
                         </div>
                         <div class="form-group">
                             <label for="fichaClinica">Ficha Clinica:</label>
                             <input type="text" class="form-control" id="fichaClinica" name="fichaClinica"
-                                   value="fichaClinica">
+                                   value=<c:out value="${paciente.fichaClinica}" />>
                         </div>
                         <div class="form-group">
                             <label for="nombrePaciente">Nombre:</label>
                             <input type="text" class="form-control" id="nombrePaciente" name="nombrePaciente"
-                                   value="nombrePaciente">
+                                   value=<c:out value="${paciente.nombrePaciente}" />>
                         </div>
                         <div class="form-group">
                             <label for="apellidoPaternoPaciente">Apellido Paterno:</label>
                             <input type="text" class="form-control" id="apellidoPaternoPaciente"
                                    name="apellidoPaternoPaciente"
-                                   value="apellidoPaternoPaciente">
+                                   value=<c:out value="${paciente.apellidoPaternoPaciente}" />>
                         </div>
                         <div class="form-group">
                             <label for="apellidoMaternoPaciente">Apellido Materno:</label>
                             <input type="text" class="form-control" id="apellidoMaternoPaciente"
                                    name="apellidoMaternoPaciente"
-                                   value="apellidoMaternoPaciente">
+                                   value=<c:out value="${paciente.apellidoMaternoPaciente}" />>
                         </div>
-                        <button type="submit" class="btn btn-custom btn-block">Modificar Paciente</button>
+                        <button type="submit" class="btn btn-primary btn-block">Modificar Paciente</button>
                     </form>
                 </div>
             </div>

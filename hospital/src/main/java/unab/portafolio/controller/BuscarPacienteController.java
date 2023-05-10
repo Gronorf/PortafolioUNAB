@@ -25,26 +25,26 @@ public class BuscarPacienteController {
 	}
 
 	@PostMapping(value="/finalbuscar")
-	public ModelAndView test2(HttpServletResponse response, HttpServletRequest request) throws IOException, DAOException {
+	public ModelAndView test2(Model model, ModelAndView modelAndView, HttpServletResponse response, HttpServletRequest request) throws IOException, DAOException {
 
+
+		int targetPaciente = Integer.parseInt(request.getParameter("targetPaciente"));
 		PacienteDAO pacienteDAO = new PacienteDAO();
-		int rutPaciente = Integer.parseInt(request.getParameter("rutPaciente"));
-		int fichaClinica = Integer.parseInt(request.getParameter("fichaClinica"));
 
-		for (Paciente paciente: pacienteDAO.readAll()) {
-			if ( (rutPaciente == paciente.getRutPaciente()) || (fichaClinica == paciente.getFichaClinica()) ) {
+		for (Paciente paciente : pacienteDAO.readAll()) {
+			if ((targetPaciente == paciente.getRutPaciente()) || (targetPaciente == paciente.getFichaClinica())) {
 
 				System.out.println(paciente);
-				request.setAttribute("rutPaciente", paciente.getRutPaciente());
-				request.setAttribute("fichaClinica", paciente.getFichaClinica());
-				request.setAttribute("nombrePaciente", paciente.getNombrePaciente());
-				request.setAttribute("apellidoPaternoPaciente", paciente.getApellidoPaternoPaciente());
-				request.setAttribute("apellidoMaternoPaciente", paciente.getApellidoMaternoPaciente());
 
-				return new ModelAndView("modificarpaciente");
+				modelAndView.addObject("pacienteMod", paciente);
+				modelAndView.setViewName("modificarpaciente");
+				pacienteDAO.delete(paciente);
+				return modelAndView;
 			}
 		}
 
-		return new ModelAndView("home");
+		model.addAttribute("mensajeError", "Paciente no encontrado.");
+		modelAndView.setViewName("home");
+		return modelAndView;
 	}
 }

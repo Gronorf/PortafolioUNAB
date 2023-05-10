@@ -32,6 +32,7 @@
             <th>Nombre</th>
             <th>Apellido Paterno</th>
             <th>Apellido Materno</th>
+            <th>Fecha Ingreso</th>
         </tr>
         </thead>
         <tbody>
@@ -43,6 +44,7 @@
                 <td>${paciente.nombrePaciente}</td>
                 <td>${paciente.apellidoPaternoPaciente}</td>
                 <td>${paciente.apellidoMaternoPaciente}</td>
+                <td>${paciente.ingresoPaciente}</td>
             </tr>
         </c:forEach>
         </tbody>

@@ -25,12 +25,13 @@ public class ModificarPacienteController {
 	}
 
 	@PostMapping(value="/finalmodificar")
-	public ModelAndView test2(@ModelAttribute Paciente paciente, Model model, HttpServletResponse response, HttpServletRequest request) throws IOException, DAOException {
+	public String test2(@ModelAttribute Paciente paciente, Model model, HttpServletResponse response, HttpServletRequest request) throws IOException, DAOException {
 
 		PacienteDAO pacienteDAO = new PacienteDAO();
+
 		pacienteDAO.update(paciente);
 
-		ModelAndView mav = new ModelAndView("home");
-		return mav;
+		model.addAttribute("mensaje", "Paciente modificado correctamente.");
+		return "home";
 	}
 }
