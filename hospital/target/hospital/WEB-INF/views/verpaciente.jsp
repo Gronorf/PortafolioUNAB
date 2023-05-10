@@ -13,6 +13,18 @@
           integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
           crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+        .btn {
+            font-size: 15px;
+            font-weight: bold;
+            background-color: #398378;
+            color: #fff;
+        }
+        .btn:hover {
+            background-color: #73a873;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
 <nav>
@@ -21,6 +33,22 @@
         <%@include file="../resources/navbar.jsp" %>
     </nav>
 </nav>
+
+<div class="d-flex">
+    <form action="ordenartabladesc" method="get" class="mr-3">
+        <input type="hidden" value="crear">
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Ordenar por Fecha de Ingreso Descendente</button>
+        </div>
+    </form>
+    <form action="ordenartablaasc" method="get">
+        <input type="hidden" value="crear">
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Ordenar por Fecha de Ingreso Ascendente</button>
+        </div>
+    </form>
+</div>
+
 
 <div class="table-responsive">
     <table class="table">

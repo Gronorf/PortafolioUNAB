@@ -1,4 +1,3 @@
-
 create table medico
 (
     idMedico              int auto_increment
@@ -17,12 +16,12 @@ create table paciente
 (
     idPaciente              int auto_increment
         primary key,
-    rutPaciente             int         not null,
-    fichaClinica            int         not null,
-    nombrePaciente          varchar(50) not null,
-    apellidoPaternoPaciente varchar(50) null,
-    apellidoMaternoPaciente varchar(50) null,
-    ingresoPaciente         datetime    null,
+    rutPaciente             int                                not null,
+    fichaClinica            int                                not null,
+    nombrePaciente          varchar(50)                        not null,
+    apellidoPaternoPaciente varchar(50)                        null,
+    apellidoMaternoPaciente varchar(50)                        null,
+    ingresoPaciente         datetime default CURRENT_TIMESTAMP null,
     constraint fechaClinica_UNIQUE
         unique (fichaClinica),
     constraint idPaciente_UNIQUE

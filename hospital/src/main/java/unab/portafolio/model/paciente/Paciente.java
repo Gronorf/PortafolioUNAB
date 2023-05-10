@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.sql.Date;
 import java.sql.Timestamp;
 
 @Getter
@@ -37,8 +36,6 @@ public class Paciente {
     public void setIngresoPaciente() {
         this.ingresoPaciente = new Timestamp(System.currentTimeMillis());
     }
-
-
 
     @Override
     public boolean equals(Object o) {

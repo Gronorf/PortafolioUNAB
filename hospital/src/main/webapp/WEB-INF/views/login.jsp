@@ -46,47 +46,13 @@
 <footer class="fixed-bottom">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <h4>Enlaces útiles</h4>
-                <ul class="list-unstyled">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Acerca de</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h4>Información de contacto</h4>
-                <ul class="list-unstyled">
-                    <li><i class="fa fa-map-marker"></i> 123 Calle Falsa, Ciudad Ficticia</li>
-                    <li><i class="fa fa-phone"></i> (123) 456-7890</li>
-                    <li><i class="fa fa-envelope"></i> info@ejemplo.com</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h4>Síguenos</h4>
-                <ul class="list-unstyled list-inline">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
             <div class="col-md-12">
-                <hr>
-                <p class="text-muted small">Derechos reservados &copy; 2023 | Ejemplo.com</p>
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    Creado por: Mauricio Gutiérrez Ulloa | 2023 | Alpha 0.0.1
+                </div>
             </div>
         </div>
     </div>
 </footer>
-
-
-<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2023 - Todos los derechos reservados
-</div>
-</footer>
-
 
 </html>

@@ -55,6 +55,61 @@ public abstract class DAO<T> {
         return entidades;
     }
 
+    public List<T> OrderByDesc(String columna) throws DAOException {
+
+        List<T> entidades = null;
+        Session session = HibernateUtility.getSessionFactory().openSession();
+
+        try {
+            String query = "FROM " + getNombreModelo() + " ORDER BY " + columna + " DESC";
+            Query q = session.createQuery(query);
+            entidades = q.list();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } finally {
+            session.close();
+        }
+
+        return entidades;
+    }
+
+    public List<T> OrderByAsc(String columna) throws DAOException {
+
+        List<T> entidades = null;
+        Session session = HibernateUtility.getSessionFactory().openSession();
+
+        try {
+            String query = "FROM " + getNombreModelo() + " ORDER BY " + columna + " ASC";
+            Query q = session.createQuery(query);
+            entidades = q.list();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } finally {
+            session.close();
+        }
+
+        return entidades;
+    }
+
+    public List<T> Reporte(String columna, int atenciones) throws DAOException {
+
+        List<T> entidades = null;
+        Session session = HibernateUtility.getSessionFactory().openSession();
+
+        try {
+            String query = "FROM " + getNombreModelo() + " ORDER BY " + columna + " ASC";
+            Query q = session.createQuery(query);
+            q.setMaxResults(atenciones);
+            entidades = q.list();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } finally {
+            session.close();
+        }
+
+        return entidades;
+    }
+
     public boolean  update(T entidad) throws DAOException {
 
         boolean isModified = false;

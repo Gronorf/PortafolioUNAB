@@ -38,7 +38,7 @@
                             <input type="text" class="form-control" id="targetPaciente" name="targetPaciente"
                                    placeholder="" required pattern="[0-9]+">
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Buscar Paciente</button>
+                        <button type="submit" class="btn btn-primary btn-block">Eliminar Paciente</button>
                     </form>
 
                 </div>

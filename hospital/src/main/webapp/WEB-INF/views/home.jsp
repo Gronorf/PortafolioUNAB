@@ -91,8 +91,8 @@
             </form>
         </div>
         <div class="col">
-            <form action="/finalmodificar" method="get">
-                <a href="agregarpaciente" style="text-decoration: none;">
+            <form action="/inicioreporte" method="get">
+                <a href="inicioreporte" style="text-decoration: none;">
                     <div class="card text-center">
                         <div class="image">
                             <input type="hidden">
