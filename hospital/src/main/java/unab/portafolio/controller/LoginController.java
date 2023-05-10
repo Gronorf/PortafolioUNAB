@@ -5,6 +5,7 @@ import java.io.IOException;
 import jakarta.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -25,7 +26,7 @@ public class LoginController {
     }
 
     @PostMapping(value="/verificationLogin")
-    public ModelAndView entrarLogin(HttpServletRequest request) throws IOException, DAOException {
+    public ModelAndView entrarLogin(Model model, HttpServletRequest request) throws IOException, DAOException {
 
         String nombreUsuario = request.getParameter("nombreUsuario");
         System.out.println(nombreUsuario);
@@ -43,7 +44,8 @@ public class LoginController {
             }
         }
 
-        return new ModelAndView("error");
+        model.addAttribute("mensaje", "Usuario y/o Clave incorrecta.");
+        return new ModelAndView("home");
     }
 
 }

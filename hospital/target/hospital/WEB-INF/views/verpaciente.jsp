@@ -38,13 +38,13 @@
     <form action="ordenartabladesc" method="get" class="mr-3">
         <input type="hidden" value="crear">
         <div class="text-center">
-            <button type="submit" class="btn btn-primary">Ordenar por Fecha de Ingreso Descendente</button>
+            <button type="submit" class="btn btn-primary">Ordenar por Ultimos Ingresos</button>
         </div>
     </form>
     <form action="ordenartablaasc" method="get">
         <input type="hidden" value="crear">
         <div class="text-center">
-            <button type="submit" class="btn btn-primary">Ordenar por Fecha de Ingreso Ascendente</button>
+            <button type="submit" class="btn btn-primary">Ordenar por Primeros Ingresos</button>
         </div>
     </form>
 </div>

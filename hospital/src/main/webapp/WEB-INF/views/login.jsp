@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="resources/style.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
 <div class="login-form">
@@ -38,11 +40,16 @@
                 <button type="submit" class="btn btn-primary">Crear Cuenta</button>
             </div>
     </form>
-
 </div>
 
-</body>
+<c:if test="${not empty mensaje}">
+    <div class="alert alert-success text-center mensaje-fade" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        <p>${mensaje}</p>
+    </div>
+</c:if>
 
+</body>
 <footer class="fixed-bottom">
     <div class="container">
         <div class="row">
