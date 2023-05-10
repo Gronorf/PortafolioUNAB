@@ -3,17 +3,12 @@ package unab.portafolio.controller;
 import java.io.IOException;
 
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import unab.portafolio.dao.DAOException;
-import unab.portafolio.model.medico.Medico;
 import unab.portafolio.model.usuario.Usuario;
 import unab.portafolio.model.usuario.UsuarioDAO;
 
@@ -48,7 +43,7 @@ public class LoginController {
             }
         }
 
-        return new ModelAndView("error404");
+        return new ModelAndView("error");
     }
 
 }

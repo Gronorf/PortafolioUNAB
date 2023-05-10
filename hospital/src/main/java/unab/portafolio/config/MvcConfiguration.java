@@ -18,6 +18,7 @@ public class MvcConfiguration implements WebMvcConfigurer {
     // Este metodo setea las URL con las vistas JSP creadas.
 
     public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/error").setViewName("error");
         registry.addViewController("/").setViewName("login");
         registry.addViewController("/home").setViewName("home");
         registry.addViewController("/createaccount").setViewName("createaccount");

@@ -24,13 +24,15 @@ public class ReporteController {
 
 	}
 
+	static int atencionPacientes;
+
 	@PostMapping(value = "/finreporte")
 	public ModelAndView test(HttpServletResponse response, HttpServletRequest request) throws IOException, DAOException {
 
 		int horasMedicas = Integer.parseInt(request.getParameter("horasMedicas"));
 		PacienteDAO pacienteDAO = new PacienteDAO();
 
-		int atencionPacientes = horasMedicas * 2;
+		atencionPacientes = horasMedicas * 2;
 
 		List<Paciente> pacientes = pacienteDAO.Reporte("ingresoPaciente", atencionPacientes);
 		System.out.println(pacientes);

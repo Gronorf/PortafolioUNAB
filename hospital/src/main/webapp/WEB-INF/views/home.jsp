@@ -78,8 +78,8 @@
             </form>
         </div>
         <div class="col">
-            <form action="/finalmodificar" method="get">
-                <a href="agregarpaciente" style="text-decoration: none;">
+            <form action="error" method="get">
+                <a href="error" style="text-decoration: none;">
                     <div class="card text-center">
                         <div class="image">
                             <input type="hidden">
@@ -104,15 +104,15 @@
             </form>
         </div>
         <div class="col">
-                <a href="/hospital_war/" style="text-decoration: none;">
-                    <div class="card text-center">
-                        <div class="image">
-                            <input type="hidden">
-                            <img src="resources/exitlogo.png" width="75"/>
-                        </div>
-                        <span>Salir</span>
+            <a href="/hospital_war/" style="text-decoration: none;">
+                <div class="card text-center">
+                    <div class="image">
+                        <input type="hidden">
+                        <img src="resources/exitlogo.png" width="75"/>
                     </div>
-                </a>
+                    <span>Salir</span>
+                </div>
+            </a>
         </div>
     </div>
 </div>

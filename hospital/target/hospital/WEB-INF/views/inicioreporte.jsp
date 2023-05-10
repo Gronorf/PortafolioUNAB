@@ -30,7 +30,7 @@
                     <h3 class="text-center">Reporte</h3>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="/hostpial_war/finreporte">
+                    <form method="post" action="/hospital_war/finreporte">
                         <div class="form-group">
                             <label for="horasMedicas">Ingrese Horas Hospitalarias:</label>
                             <input type="text" class="form-control" id="horasMedicas" name="horasMedicas"

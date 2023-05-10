@@ -34,6 +34,13 @@
     </nav>
 </nav>
 
+<form action="/hospital_war/api/report/pdf" method="get" class="mr-3">
+    <input type="hidden" value="crear">
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">Obtener PDF</button>
+    </div>
+</form>
+
 <div class="table-responsive">
     <table class="table">
         <thead>
