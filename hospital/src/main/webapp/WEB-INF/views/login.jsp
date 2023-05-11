@@ -49,6 +49,14 @@
     </div>
 </c:if>
 
+<c:if test="${not empty mensajeError}">
+    <div class="alert alert-danger text-center mensaje-fade" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        <p>${mensajeError}</p>
+    </div>
+</c:if>
+
+
 </body>
 <footer class="fixed-bottom">
     <div class="container">

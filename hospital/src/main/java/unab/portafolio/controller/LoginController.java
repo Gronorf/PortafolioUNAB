@@ -44,8 +44,8 @@ public class LoginController {
             }
         }
 
-        model.addAttribute("mensaje", "Usuario y/o Clave incorrecta.");
-        return new ModelAndView("home");
+        model.addAttribute("mensajeError", "Usuario y/o Clave incorrecta.");
+        return new ModelAndView("login");
     }
 
 }
