@@ -5,6 +5,10 @@ import lombok.Getter;
 import lombok.Setter;
 
 
+/*Mediante la librería Lombok podemos utilizar
+las anotaciones @Getter y @Setter para generar
+el encapsulamiento de las entidades.*/
+
 @Getter
 @Setter
 @Entity
