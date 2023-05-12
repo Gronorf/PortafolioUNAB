@@ -43,7 +43,7 @@ La aplicación ofrece las siguientes funcionalidades principales:
     La aplicación cuenta con un sistema de autenticación que permite a los usuarios iniciar sesión de manera segura. Esto garantiza que solo los usuarios autorizados puedan acceder a las funcionalidades del sistema.
 
 - ### Administración de pacientes (CRUD): 
-    La aplicación proporciona las operaciones básicas de Crear, Leer, Actualizar y Eliminar (CRUD) para la gestión de pacientes. Los usuarios pueden agregar nuevos pacientes, ver la información detallada de cada paciente, actualizar su información y eliminar registros de pacientes existentes.
+    La aplicación proporciona las operaciones básicas de [Crear](hospital/src/main/java/unab/portafolio/dao/DAO.java#L17), [Leer](hospital/src/main/java/unab/portafolio/dao/DAO.java#L40), [Actualizar](hospital/src/main/java/unab/portafolio/dao/DAO.java#L113) y [Eliminar](hospital/src/main/java/unab/portafolio/dao/DAO.java#L134) (CRUD) para la gestión de pacientes. Los usuarios pueden agregar nuevos pacientes, ver la información detallada de cada paciente, actualizar su información y eliminar registros de pacientes existentes.
 
 - ### Algoritmo de priorización de pacientes y generación de reporte en PDF: 
     La aplicación implementa un algoritmo de priorización de pacientes, que permite asignar prioridades según criterios específicos. Además, se genera un informe en formato PDF que resume la información relevante de los pacientes prioritarios. Este informe puede descargarse y utilizarse para su posterior revisión o impresión.
@@ -51,6 +51,8 @@ La aplicación ofrece las siguientes funcionalidades principales:
 La combinación de estas funcionalidades ofrece a los usuarios una herramienta completa para el control de ingreso, administración y priorización de pacientes en un entorno eficiente y seguro.
 
 # 4. Rúbrica Evaluativa.
+
+### Consulta a la base de datos:
 
 1.  [Selecciona las columnas requeridas para presentar la información solicitada.](hospital/src/main/java/unab/portafolio/dao/DAO.java#L46)
 
@@ -61,6 +63,8 @@ La combinación de estas funcionalidades ofrece a los usuarios una herramienta c
 4. [Utiliza cláusulas de ordenamiento para presentar la información.](hospital/src/main/java/unab/portafolio/dao/DAO.java#82)
 
 5. Utiliza cláusulas de agrupación de información para obtener datos agregados.
+    
+### Algoritmo de cálculo y unidades de prueba:
 
 6. [Utilización general del lenguaje, sintaxis, selección de tipos de datos, sentencias lógicas, expresiones, operaciones, comparaciones.](hospital/src/main/java/unab/portafolio/controller/EliminarPacienteController.java#L34)
 
@@ -80,6 +84,8 @@ La combinación de estas funcionalidades ofrece a los usuarios una herramienta c
     
 11. [Utilización de unidades de prueba.](hospital/src/test/java/unab/portafolio/singleton/HibernateUtilityTest.java#L14)
 
+### Página web html y css:
+
 12. Utilización de tags html, estilos y responsividad.
 
     - [Tags HTML.](hospital/src/main/webapp/WEB-INF/views/home.jsp#L3)
@@ -88,4 +94,30 @@ La combinación de estas funcionalidades ofrece a los usuarios una herramienta c
 
 13. [Utilización de Botstrap.](hospital/src/main/webapp/WEB-INF/views/login.jsp#L13)
 
-14. 
+### Spring MVC:
+
+14. [Utilización de Controllers.](hospital/src/main/java/unab/portafolio/controller/LoginController.java#L16)
+
+15. [Utilización de vistas JSP y Taglib.](hospital/src/main/webapp/WEB-INF/views/verpaciente.jsp#67)
+
+16. Creación Servicio Spring.
+
+    - Dependencias:
+        - [Spring Core](hospital/pom.xml#L50)
+        - [Spring MVC](hospital/pom.xml#L28)
+    - Anotaciones de Clase:
+        - [@Configuration](hospital/src/main/java/unab/portafolio/config/MvcConfiguration.java#L13)
+        - [@EnableWebMvc](hospital/src/main/java/unab/portafolio/config/MvcConfiguration.java#L15)
+        - [@Controller](hospital/src/main/java/unab/portafolio/controller/CreateAccountController.java#L10)
+        - [@GetMapping](hospital/src/main/java/unab/portafolio/controller/LoginController.java#L22)
+        - [@PostMapping](hospital/src/main/java/unab/portafolio/controller/LoginController.java#L28)
+
+17. [Creación DAO acceso a datos.](hospital/src/main/java/unab/portafolio/dao/DAO.java#L10)
+
+18. Creación del proyecto y configuración.
+
+19. Funcionamiento general del aplicativo.
+
+### API Rest.
+
+20. Creación servicio Rest.
