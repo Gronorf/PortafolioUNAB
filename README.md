@@ -116,8 +116,12 @@ La combinación de estas funcionalidades ofrece a los usuarios una herramienta c
 
 18. Creación del proyecto y configuración.
 
+    - [Conexión base de datos.](hospital/src/main/resources/hibernate.cfg.xml)
+    - [Configuración MVC.](hospital/src/main/java/unab/portafolio/config/MvcConfiguration.java)
+
+
 19. Funcionamiento general del aplicativo.
 
 ### API Rest.
 
-20. Creación servicio Rest.
+20. [Creación servicio Rest.](hospital/src/main/java/unab/portafolio/controller/ReportController.java#L21)
